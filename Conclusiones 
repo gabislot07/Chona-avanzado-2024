@@ -1,0 +1,29 @@
+Al comenzar el proyecto, 
+decidimos elegir 4 columnas numericas continuas y 4 categoricas (sin contar la que vamos a predecir).
+El EDA, al ser pocas columnas, no fue tan complicado. por suerte, habia un equilibrio en la distribucion de la variable a predecir
+
+Conclusiones de los modelos:
+
+Parte 1:
+1. El modelo de regresión lineal no mostro tan buenos resultados, en especial la de roc auc, fue pesima (0.51). 
+
+2. Decision tree: El modelo de árbol de decisión no mostro resultados tan diferentes al de la regr. logistica. La diferencia la marco con la metrica ROC AUC SCORE, teniendo un porcentaje de 0.72, con una precisión del 90% en la clasificación de las instancias. Sin embargo, se observó cierto overfitting en el modelo, ya que mostró un rendimiento inferior en los datos de prueba en comparación con los datos de entrenamiento. Sería recomendable ajustar los parámetros del modelo para reducir el overfitting.
+
+
+
+Parte 2:
+1. Modelo de Regresión Logística: Mostró un ajuste muy parecido a los datos al del primer modelo de todos. En este caso, al tener mas columans en el data set (mas datos), y en este caso categoricos, se pudo notar una gran diferencia en cuanto a la metrica ROC AUC SCOCRE (0.75)
+
+2. Decision tree : Realizamos una busqueda de hiperparametros para mejorar el modelo, lo que luego llevo a un mucho mejor rendimiento EN TODOS LOS ASPECTOS que el resto de los modelos. El ROC AUC SCORE resulto ser de 0.84, bastante comparado con  lo que veniamos obteninedo de los demas modelos.
+
+
+
+
+En terminos generales, claramente el que mejor nos resulto fue el cuarto modelo, el decision tree, con atributos categoricos y numericos.
+La busqueda de hiperparametros fue clave para mejorar el rendimiento del modelo. 
+Aun se le puede poner mas iteraciones, profundidad, agrandar la grilla de hiperparametros, etc , para mejorar aun mas el modelo.
+
+
+
+
+
